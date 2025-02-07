@@ -1,36 +1,51 @@
 <?php
-    $output = null;
-    $string = 'Hello World!';
+/*
+- 'Y' - The year
+- 'm' - The month
+- 'd' - The day
+- 'D' - The day of the week short name
+- 'l' - The full day of the week name
+- 'h' - The hour
+- 'i' - The minute
+- 's' - The second
+- 'a' - AM/PM
+*/
 
-    //strlen
-    $output = strlen($string);
+    // Get Year
+    $output = date('Y');
 
-    //str_word_count
-    $output = str_word_count($string);
+    // Get year with timestamp
+    $output = date('Y', 936345600);
 
-    //strpos
-    $output = strpos($string, 'World!');
+    // Get year with strtotime
+    $output = date('Y', strtotime('1998-03-17'));
 
-    //Get specific char by index
-    $output = $string[7];
+    // Get Month
+    $output = date('m');
 
-    // substr
-    $output = substr($string, 0, 7);
+    // Get Day short day
+    $output = date('D');
 
-    // str_replace
-    $output = str_replace('World!', 'Universe', $string);
+    // Get Day full day
+    $output = date('l');
 
-    //strtolower
-    $output = strtolower($string);
+    // Get month, day and year
+    $output = date('Y-m-d');
 
-    //strtoupper
-    $output = strtoupper($string);
+    // Get hour
+    $output = date('h');
 
-    //ucwords
-    $output = ucwords($string);
+    // Get min
+    $output = date('i');
 
-    //trim
-    $output = trim('  Hello  world')
+    // Get seconds
+    $output = date('s');
+
+    // Get am/pm
+    $output = date('a');
+
+    // Put it all together
+    $output = date('Y-m-d h:i:s a');
 ?>
 
 <!doctype html>
