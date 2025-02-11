@@ -1,15 +1,24 @@
 <?php
 $output = null;
-$user = [
-    'name' => 'John Doe',
-    'email' => 'john@doe.com',
-    'password' => 12345678,
-    'hobbies' => ['soccer', 'basketball', 'football']
+$fruits = [
+    ['Apple', 'Red',],
+    ['Orange', 'Orange',],
+    ['Banana', 'Yellow',],
 ];
-$output = $user['name'];
-$output = $user['email'];
-$output = $user['hobbies'][0];
-$user['address'] = 'Tashkent'
+
+$output = $fruits[0][0];
+$fruits[] = ['Kiwi', 'Green',];
+
+$users = [
+    ['name' => 'John', 'email' => 'john@example.com', 'password' => 123456],
+    ['name' => 'Jane', 'email' => 'jane@example.com', 'password' => 123456],
+    ['name' => 'Jack', 'email' => 'jack@example.com', 'password' => 123456],
+];
+
+array_push($users, ['name' => 'Nick', 'email' => 'nick@example.com', 'password' => 123456]);
+
+$output = $users[0]['name'];
+
 ?>
 
 <!doctype html>
@@ -32,11 +41,8 @@ $user['address'] = 'Tashkent'
     <div class="bg-white rounded-lg shadow-md p-6">
         <!-- output -->
         <?= $output ?>
-        <h2 class="text-xl font-semibold py-4">Associative arrays:</h2>
         <pre>
-            <?php
-            print_r($user);
-            ?>
+            <?php print_r($users) ?>
         </pre>
     </div>
 </div>
