@@ -1,11 +1,12 @@
 <?php
 
-$age = 17;
+$names = ['Alex', 'Beth', 'Caroline', 'Dave', 'Elanor', 'Anna', 'Freddie', 'Adam'];
 
-if ($age >= 21) {
-    echo "You're allowed to drink in the US!";
-} else if ($age >= 18) {
-    echo "You're not allowed to drink in the US! but you can vote";
-} else {
-    echo "You're not allowed to drink and vote in the US!";
+for ($i = 0; $i < count($names); $i++) {
+    if ($names[$i][0] === 'A') {
+        continue;
+    }
+    echo strtolower(strrev($names[$i]));
+
+    echo '<br>';
 }
